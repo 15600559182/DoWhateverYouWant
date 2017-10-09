@@ -8,7 +8,7 @@ if __name__ == '__main__':
         for b in range(a + 1):
 
             if b == 0:
-                print('[', end='')
+                print('', end='')
             c = all - 1 - b
             print(aa[c], end='=')
             print('[%d][%d]' % (b, c), end=',')

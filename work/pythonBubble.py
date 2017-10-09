@@ -1,3 +1,4 @@
+#冒泡排序 第一种
 class pythonBubble:
     def BuB_sort(self, arr):
         # 循环次数取决于数组的长度

@@ -1,3 +1,4 @@
+#读取文件
 #!/usr/bin/env python
 
 class readTextFile(object):

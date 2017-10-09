@@ -2,7 +2,7 @@
 
 def displayNumType(num):
     print(num,"is")
-    if(isinstance(num,(int,float,complex))):
+    if(isinstance(num,(int,float,complex))):#是否在这些类型之中
         print("a numebr of type:", type(num).__name__)
     else:
         print("not a number at all!!")

@@ -6,7 +6,7 @@ def merge(left, right):
     result = []
 
     while i < len(left) and j < len(right):
-        # 比较大小
+        # 比较大小 不断追加
         if left[i] <= right[j]:
             result.append(left[i])
             i += 1
@@ -19,14 +19,18 @@ def merge(left, right):
     return result
 
 
-# 拆分数组
+# 拆分数组  分解：将原问题分解成一系列子问题；
 def merge_sort(lists):
-    # 递归
+    #   对于子序列排序时，其长度为1时，递归结束。当个元素视为已排好序
     if len(lists) <= 1:
         return lists
+    # 分解：将n个元素分成各含n/2个元素的子序列
     num = len(lists) // 2
+    # 解决：用合并排序法将两个子序列递归的排序
     left = merge_sort(lists[:num])
     right = merge_sort(lists[num:])
+
+    # 合并：合并两个已排序的子序列以得到排序结果
     return merge(left, right)
 
 

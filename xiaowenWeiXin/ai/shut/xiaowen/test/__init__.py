@@ -1,3 +1,5 @@
+# -*- coding:utf8 -*-
+
 import time
 import itchat
 
@@ -15,7 +17,6 @@ def text_reply(msg):
 
 
 if __name__=="__main__":
-
     #登录
     itchat.auto_login(hotReload=True)
     # name = itchat.search_friends(name=u'--')

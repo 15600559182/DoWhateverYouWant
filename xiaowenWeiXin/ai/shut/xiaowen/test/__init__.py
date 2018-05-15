@@ -12,23 +12,24 @@ def text_reply(msg):
                         (time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(msg['CreateTime'])),
                          msg['User']['NickName'],
                          msg['Text']), 'filehelper')
+        print(msg['Text'])
         # 回复给好友
-        return u'[自动回复]您好，我现在有事不在，一会再和您联系。\n已经收到您的的信息：%s\n' % (msg['Text'])
+        return u'[小文AI自动回复]您好，我现在有事不在，一会再和您联系。\n已经收到您的的信息：%s\n' % (msg['Text'])
 
 
 if __name__=="__main__":
     #登录
-    itchat.auto_login(hotReload=True)
-    # name = itchat.search_friends(name=u'--')
-    # codeName = name[0]["UserName"]
-    # print(codeName)
-    # #发送消息 你好！我是小文机器人，基于python的itchar框架开发。以后我会骚扰经常你的,请多指教！
-    # itchat.send(
-    #     '#号后边是注释 更短了'
-    #     , toUserName=codeName)
-    # 获取自己的UserName
-    myUserName = itchat.get_friends(update=True)[0]["UserName"]
-    itchat.run()
+    # itchat.auto_login(hotReload=True)
+    # # name = itchat.search_friends(name=u'--')
+    # # codeName = name[0]["UserName"]
+    # # print(codeName)
+    # # #发送消息 你好！我是小文机器人，基于python的itchar框架开发。以后我会骚扰经常你的,请多指教！
+    # # itchat.send(
+    # #     '#号后边是注释 更短了'
+    # #     , toUserName=codeName)
+    # # 获取自己的UserName
+    # myUserName = itchat.get_friends(update=True)[0]["UserName"]
+    # itchat.run()
 
 
     #@itchat.msg_register(itchat.content.TEXT)

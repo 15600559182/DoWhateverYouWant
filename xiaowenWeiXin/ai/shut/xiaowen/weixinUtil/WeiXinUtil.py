@@ -13,7 +13,7 @@ class WeiXinUtil1:
         登录微信用户账号
     """
     def __init__(self):
-        itchat.auto_login(hotReload=True)
+        itchat.auto_login(enableCmdQR=True)
         print(1)
 
     def print1(self):
